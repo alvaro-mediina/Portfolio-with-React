@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+
+# Build directories
+dist/
+dist-ssr/
+build/
+
+# Editor directories and files
+.vscode/
+!.vscode/extensions.json
+
+# Testing
+coverage/
+*.lcov
+
+# Next.js
+.next/
+out/
+
+# Temp files
+tmp/
+temp/
