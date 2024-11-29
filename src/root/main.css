@@ -1,5 +1,54 @@
-*{
-    background-color: var(--bg);
-    width: 100%;
+@import '/src/utils/colors.css';
+
+/* Black */
+@font-face {
+    font-family: 'Akzidenz Grotesk';
+    src: url('/src/assets/fonts/Akzidenz-grotesk-black.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Akzidenz Grotesk';
+    src: url('/src/assets/fonts/Akzidenz-grotesk-bold.woff2') format('woff2');
+    font-weight: 900;
+    font-style: bold;
+}
+
+/* Light */
+@font-face {
+    font-family: 'Akzidenz Grotesk';
+    src: url('/src/assets/fonts/Akzidenz-grotesk-light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Black */
+@font-face {
+    font-family: 'Digitany';
+    src: url('/src/assets/fonts/digitany.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+*,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+font-family: 'Digitany', 'Times New Roman';
+}
+  
+body{
     height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--bg); 
+    color: white; 
+    z-index: -1;
 }

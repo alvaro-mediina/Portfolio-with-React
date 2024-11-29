@@ -21,3 +21,6 @@ out/
 # Temp files
 tmp/
 temp/
+
+#mp4 files
+*.mp4
