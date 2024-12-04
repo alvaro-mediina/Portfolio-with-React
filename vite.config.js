@@ -7,6 +7,6 @@ export default defineConfig({
     base: '/Portfolio-with-React/',
     build: {
         target: 'esnext',
-    },
+    }
 })
 
