@@ -23,3 +23,30 @@
     background: rgba(0, 0, 0, 0.7);  /* Fondo semitransparente */
     z-index: 0;  /* Asegura que el overlay esté encima del video pero debajo del contenido */
 }
+
+/* Media queries */
+@media (max-width: 1200px) {
+    .background-video {
+        object-fit: contain; /* Asegura que el video no se recorte en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .video-container {
+        height: 80vh; /* Reduce el alto del contenedor */
+    }
+    .background-video {
+        object-fit: cover; /* Asegura que el video siga ocupando el área visible */
+        filter: brightness(80%); /* Oscurece ligeramente en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .video-container {
+        height: 60vh; /* Reduce más el alto */
+    }
+    .background-video {
+        object-fit: cover;
+        transform: scale(1.1); /* Aumenta ligeramente el tamaño para evitar márgenes */
+    }
+}
