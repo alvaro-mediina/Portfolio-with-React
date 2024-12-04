@@ -1,5 +1,4 @@
 import './BackgroundVideo.css';
-import sun from '../../assets/video/sun.mp4';
 import colors from '../../assets/video/colors.mp4';
 
 
