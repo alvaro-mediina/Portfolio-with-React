@@ -5,8 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
     plugins: [react()],
     base: 'https://alvaro-mediina.github.io/Portfolio-with-React/',
-    build: {
-        target: 'esnext',
-    }
 })
 
