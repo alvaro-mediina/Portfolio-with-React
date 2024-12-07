@@ -1,0 +1,56 @@
+
+.welcome__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--neutral-green);
+    border-radius: 100px;
+}
+
+.welcome__text {
+    padding: 50px;
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+/* Pantalla negra inicial */
+.black-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+/* Clase para desvanecerse */
+.black-screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+
+
+    .welcome__text {
+        font-size: 2rem; /* Reduce el tamaño de la fuente */
+    }
+}
+
+@media (max-width: 480px) {
+
+    .welcome__text {
+        font-size: 2rem;
+    }
+}

@@ -1,5 +1,5 @@
 import './BackgroundVideo.css';
-import colors from '../../assets/video/colors.mp4';
+import colors from '../../../assets/video/colors.mp4';
 
 
 function BackgroundVideo() {

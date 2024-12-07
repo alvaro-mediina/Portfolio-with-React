@@ -8,64 +8,8 @@
     width: 100%;
     height: 100vh;
     display: flex;
+    background-color: var(--bg);
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.welcome-text {
-    font-size: 5rem;
-    font-weight: bold;
-    color: white;
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-}
-
-/* Pantalla negra inicial */
-.black-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    z-index: 1000;
-    opacity: 1;
-    transition: opacity 2s ease;
-}
-
-/* Clase para desvanecerse */
-.black-screen.fade-out {
-    opacity: 0;
-    pointer-events: none;
-}
-
-/* Cursor parpadeante */
-.cursor {
-    display: inline-block;
-    animation: blink 0.8s steps(1) infinite;
-}
-
-/* Keyframes para parpadeo del cursor */
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .welcome-text {
-        font-size: 2rem; /* Reduce el tamaño de la fuente */
-    }
-}
-
-@media (max-width: 480px) {
-    .welcome-text {
-        font-size: 2rem; /* Aún más pequeño para pantallas muy pequeñas */
-        padding: 0.1rem; /* Añade espacio lateral */
-    }
 }
