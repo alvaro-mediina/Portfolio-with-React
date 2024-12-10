@@ -1,11 +1,11 @@
 import './Welcome.css';
-import { useState, useEffect, useContext } from 'react';
-import { welcomeContext } from '../App';
+import { useState, useEffect } from 'react';
 import { WELCOME } from '../../utils/Constants';
+import { useWelcomeProvider } from '../../context/WelcomeProvider';
 
 function Welcome() {
     // Recupero la información del contexto de Welcome
-    const WELCOME_STATE = useContext(welcomeContext);
+    const WELCOME_STATE = useWelcomeProvider();
 
     const [isBlackScreenVisible, setBlackScreenVisible] = useState(true);
     const [isGreenBackground, setGreenBackground] = useState(false);

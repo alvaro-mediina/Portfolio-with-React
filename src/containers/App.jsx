@@ -1,20 +1,18 @@
 import './App.css'
+import { WelcomeProvider } from '../context/WelcomeProvider';
 import Welcome from './components/Welcome'; 
 import React, { useState } from 'react';
-import { useContext } from 'react';
 
-export const welcomeContext = React.createContext();
+
 
 function App() {
     
-    const [welcomeState, setWelcomeState] = useState(true);
-
     return (
-        <welcomeContext.Provider value={welcomeState}>
-            <div className="App">
+        <div className="App">
+            <WelcomeProvider>   
                 <Welcome/>
-            </div>
-        </welcomeContext.Provider>
+            </WelcomeProvider>
+        </div>
     );
 }
 
