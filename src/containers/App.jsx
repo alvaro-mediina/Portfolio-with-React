@@ -1,7 +1,7 @@
 import './App.css'
-import { WelcomeProvider } from '../context/WelcomeProvider';
-import Welcome from './components/Welcome'; 
-import React, { useState } from 'react';
+import { WelcomeProfileProvider } from '../context/WelcomeProfileProvider';
+import WelcomeProfile from './components/Welcome-Profile/WelcomeProfile'; 
+import React from 'react';
 
 
 
@@ -9,9 +9,9 @@ function App() {
     
     return (
         <div className="App">
-            <WelcomeProvider>   
-                <Welcome/>
-            </WelcomeProvider>
+            <WelcomeProfileProvider>
+                <WelcomeProfile/>
+            </WelcomeProfileProvider>
         </div>
     );
 }

@@ -1,0 +1,120 @@
+/* Estado inicial */
+.WelcomeProfile__init {
+    min-width: 100px;
+    min-height: 100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: 0;
+    border: 7px solid var(--neutral-yellow) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Contenedor de Información */
+.WelcomeProfile__container {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: var(--neutral-yellow);
+    transition: background-color 0.5s ease-in-out, 
+                width 0.5s ease-in-out 0.7s, 
+                height 0.5s ease-in-out 1.2s;
+}
+
+/* Información */
+.WelcomeProfile__container .Data{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards; /* Animación */
+}
+
+.Data .img{
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.img img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-position: center 20%;
+}
+
+.Data .text{
+    width: 60%;
+    height: 100%;
+    border-radius:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: white;
+    text-align: left;
+    line-height: 2;
+}
+
+
+/* Media Queries */
+/* Para dispositivos con ancho máximo de 480px */
+@media (width < 480px) {
+    .WelcomeProfile__init {
+        min-width: 50px;
+        min-height: 50px;
+    }
+
+    .WelcomeProfile__container {
+        width: 80%;
+        height: 80%;
+        background-color: 0;
+    }
+
+    .WelcomeProfile__container .Data{
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .Data .img{
+        width: 100%;
+        height: 40%;
+    }
+
+    .img img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .Data .text{
+        width: 100%;
+        height: 60%;
+    }
+
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
