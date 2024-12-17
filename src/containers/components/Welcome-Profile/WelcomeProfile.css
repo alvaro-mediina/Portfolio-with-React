@@ -15,7 +15,7 @@
 
 /* Contenedor de Información */
 .WelcomeProfile__container {
-    width: 60%;
+    width: 70%;
     height: 60%;
     display: flex;
     justify-content: center;
@@ -27,17 +27,18 @@
                 height 0.5s ease-in-out 1.2s;
 }
 
+
+/* Data */
 .WelcomeProfile__container .Data{
     width: 100%;
     height: 100%;
     border-radius: 50px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards; /* Animación */
 }
-
-/* Data */
 
 /* Left */
 .Data .left__container {
@@ -52,6 +53,7 @@
 }
 
 .left__container .img{
+    width: 100%;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -60,8 +62,8 @@
 }
 
 .img img{
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     border-radius: 50%;
     border: 7px solid white;
@@ -78,32 +80,33 @@
 .Data .right__container {
     width: 60%;
     height: 100%;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }    
 
 .right__container .text{
-    width: 100%;
-    height: 100%;
-    background-color: white;   
-    border-radius:30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: black;
-    text-align: left;
     line-height: 2;
     gap: 30px;
 }
 
 .text .hello{
     text-transform: uppercase;
+    text-align: center;
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .text ul{
     width: 80%;
-    font-size: 1.2rem;
+    font-size: 1rem;
     list-style: none;
     text-align: left;
     padding: 0;
@@ -113,7 +116,7 @@
 
 /* Media Queries */
 /* Para dispositivos con ancho máximo de 480px */
-@media (width < 480px) {
+@media (width < 900px ) {
     .WelcomeProfile__init {
         min-width: 50px;
         min-height: 50px;
@@ -129,23 +132,42 @@
         width: 100%;
         height: 100%;
         flex-direction: column;
+        gap: 0;
     }
 
-    .Data .img{
+    .Data .left__container{
         width: 100%;
         height: 40%;
+        gap: 10px;
     }
 
-    .img img{
-        width: 200px;
-        height: 200px;
+
+    .left__container .img img{
+        width: 150px;
+        height: 150px;
     }
 
-    .Data .text{
+    .left__container .name{
+        font-size: medium;
+    }
+
+    .Data .right__container{
         width: 100%;
         height: 60%;
     }
 
+    .right__container .text{
+        justify-content: center;
+    }
+
+    .right__container .text .hello{
+        font-size: 1.2rem;
+        text-align: center;
+
+    }
+    .right__container .text ul{
+        font-size: 0.7rem;
+    }
 }
 
 /* Animación de aparición */
