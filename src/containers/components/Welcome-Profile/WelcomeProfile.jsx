@@ -47,7 +47,18 @@ function WelcomeProfile () {
                                 <img src={pp} alt="Profile" />
                             </div>
                             <div className="text">
-                                Alvaro Medina
+                                <div className="hello">
+                                    ¡BIENVENIDO A MI PORTFOLIO!
+                                </div>
+                                <ul>
+                                    <li>Soy Alvaro Medina</li>
+                                    <li>Jujeño en Córdoba, Argentina</li>
+                                    <li>21 años</li>
+                                    <li>Estudiante de la Lic. en Ciencias de la Computación de FaMAF - UNC</li>
+                                    <li>Apasionado por la programación orientada al Front-End 
+                                        y por la resolución de problemas
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     }

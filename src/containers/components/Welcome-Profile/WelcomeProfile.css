@@ -63,12 +63,25 @@
     height: 100%;
     border-radius:30px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: black;
     background-color: white;
     text-align: left;
     line-height: 2;
+}
+
+.text .hello{
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.4rem;
+}
+
+.text ul{
+    width: 80%;
+    font-size: larger;
+    list-style: none;
 }
 
 
