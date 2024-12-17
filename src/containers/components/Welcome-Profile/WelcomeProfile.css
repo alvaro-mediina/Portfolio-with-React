@@ -27,21 +27,31 @@
                 height 0.5s ease-in-out 1.2s;
 }
 
-/* Información */
 .WelcomeProfile__container .Data{
     width: 100%;
     height: 100%;
     border-radius: 50px;
     display: flex;
-    justify-content: space-around;
     align-items: center;
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards; /* Animación */
 }
 
-.Data .img{
+/* Data */
+
+/* Left */
+.Data .left__container {
     width: 40%;
     height: 100%;
+    gap: 20px;
+    flex-direction: column;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left__container .img{
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -50,38 +60,54 @@
 }
 
 .img img{
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid white;
+    border: 7px solid white;
     object-position: center 20%;
 }
 
-.Data .text{
+.left__container .name{
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+/*Right */
+.Data .right__container {
     width: 60%;
     height: 100%;
+}    
+
+.right__container .text{
+    width: 100%;
+    height: 100%;
+    background-color: white;   
     border-radius:30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: black;
-    background-color: white;
     text-align: left;
     line-height: 2;
+    gap: 30px;
 }
 
 .text .hello{
-    font-weight: 700;
-    font-style: normal;
-    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2rem;
 }
 
 .text ul{
     width: 80%;
-    font-size: larger;
+    font-size: 1.2rem;
     list-style: none;
+    text-align: left;
+    padding: 0;
+    margin: 0;
 }
 
 
