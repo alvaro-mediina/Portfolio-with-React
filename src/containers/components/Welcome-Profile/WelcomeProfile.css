@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 
 
@@ -25,8 +26,8 @@
     transition: background-color 0.5s ease-in-out, 
                 width 0.5s ease-in-out 0.7s, 
                 height 0.5s ease-in-out 1.2s;
+    user-select: none;
 }
-
 
 /* Data */
 .WelcomeProfile__container .Data{
@@ -38,6 +39,7 @@
     justify-content: space-between;
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards; /* Animación */
+    
 }
 
 /* Left */
@@ -58,7 +60,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    overflow: visible;
 }
 
 .img img{
@@ -68,12 +70,14 @@
     border-radius: 50%;
     border: 7px solid white;
     object-position: center 20%;
+    box-shadow: 5px 0px 0px rgba(0, 0, 0, 0.2);    
 }
 
 .left__container .name{
     font-weight: 700;
     font-size: 1.5rem;
     text-transform: uppercase;
+    color: black;
 }
 
 /*Right */
