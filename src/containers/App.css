@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 .App {
@@ -12,7 +11,63 @@
     display: flex;
     overflow: auto;
     background-color: var(--bg);
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
+
+
+.arrow-left img{
+    transform: rotateZ(90deg);
+    width: 100px;
+    color:white;
+}
+
+.arrow-right img{
+    transform: rotateZ(-90deg);
+    width: 100px;
+    color:white;
+}
+
+.arrow-left,
+.arrow-right {
+    cursor: pointer;
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Posiciones iniciales */
+.arrow-left {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.arrow-right {
+    animation: slideInRight 1s ease-out forwards;
+}
+
+/* Animaciones */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0; /* Invisible */
+    }
+    100% {
+        opacity: 1; /* Visible */
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0; /* Invisible */
+    }
+    100% {
+        opacity: 1; /* Visible */
+    }
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+    transform: scale(1.1);
+}
+
+
