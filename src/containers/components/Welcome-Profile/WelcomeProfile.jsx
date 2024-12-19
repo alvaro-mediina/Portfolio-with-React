@@ -5,17 +5,19 @@ import { useEffect, useState } from "react";
 function WelcomeProfile () {
     const [profileClass, setProfileClass] = useState("WelcomeProfile__init");
     const [transitionCompleted, setTransitionCompleted] = useState(false);  
+    const [initialAnimation, setinitialAnimation] = useState(false);
 
+    useEffect(() => {
+        if (!initialAnimation) {
+            const animationTimer = setTimeout(() => {
+                setProfileClass("WelcomeProfile__container");
+                setinitialAnimation(true);
+            }, 2000);
 
-    useEffect(()=>{
-        const animationTimer = setTimeout(() => {
-            setProfileClass("WelcomeProfile__container");
-        }, 2000);
-
-        return () => clearTimeout(animationTimer);
-    }, [])
-
-
+            return () => clearTimeout(animationTimer);
+        }
+    }, [initialAnimation]);
+    
     useEffect(() => {
         if (profileClass === "WelcomeProfile__container") {
             const timer = setTimeout(() => {

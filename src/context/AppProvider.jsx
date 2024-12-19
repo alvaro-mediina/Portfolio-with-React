@@ -12,17 +12,17 @@ export function AppProvider ({ children }){
 
     const [currentSection, setCurrentSection] = useState(0);
 
-    const nextSection = () =>{
+    const rightSection = () =>{
         setCurrentSection((prev) => (prev + 1) % SECTIONS.length);
     }
     
-    const prevSection = () =>{
+    const leftSection = () =>{
         setCurrentSection((prev) => (prev - 1 + SECTIONS.length) % SECTIONS.length);
     }
 
     return(
         <SectionContext.Provider value={SECTIONS[currentSection]}>
-            <SectionUpdateContext.Provider value={{ prevSection, nextSection }}>
+            <SectionUpdateContext.Provider value={{ leftSection, rightSection }}>
                 {children}
             </SectionUpdateContext.Provider>
         </SectionContext.Provider>

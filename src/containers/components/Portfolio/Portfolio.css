@@ -47,6 +47,10 @@
     animation: slideInRight 1s ease-out forwards;
 }
 
+.WelcomeProfile, .Projects, .About, .Contact {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
 /* Animaciones */
 @keyframes slideInLeft {
     0% {
