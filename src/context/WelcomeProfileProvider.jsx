@@ -13,21 +13,24 @@ export function useWelcomeProfileToggleContext () {
     return useContext(welcomeProfileToggleContext);
 }
 
-export function WelcomeProfileProvider ({children}) {
+export const WelcomeProfileProvider = React.memo(({ children }) => {
     const [welcome, setWelcome] = useState(false);
-    const changeStateWelcome = () => {
-        if(welcome){
-            setWelcome(false);
-        }else{
-            setWelcome(true);
-        }
-    }
+    const [hasChanged, setHasChanged] = useState(false);
 
-    return(
-        <welcomeProfileContext.Provider value = {welcome}>
-        <welcomeProfileToggleContext.Provider value = {changeStateWelcome}>
-            {children}
-        </welcomeProfileToggleContext.Provider>
-    </welcomeProfileContext.Provider>
+    console.log("WelcomeProfileProvider renderizado");
+
+    const changeStateWelcome = () => {
+        if (!hasChanged) {
+            setWelcome(true);
+            setHasChanged(true);
+        }
+    };
+
+    return (
+        <welcomeProfileContext.Provider value={welcome}>
+            <welcomeProfileToggleContext.Provider value={changeStateWelcome}>
+                {children}
+            </welcomeProfileToggleContext.Provider>
+        </welcomeProfileContext.Provider>
     );
-}
+});
