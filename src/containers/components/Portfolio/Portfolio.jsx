@@ -8,13 +8,13 @@ import Social from '../Social/Social';
 import arrowL from '../../../assets/imgs/arrow.svg'
 import arrowR from '../../../assets/imgs/arrow.svg'
 
-
 function Portfolio () {
     const SECTION = useSection();
-    const { leftSection, rightSection } = useUpdateSection();
+    const [initialAnimation, setInitialAnimation] = useState(false);
     const [isWelcomeCard, setIsWelcomeCard] = useState(false);
+    const { leftSection, rightSection } = useUpdateSection();
 
-    useEffect(()=>{console.log(SECTION)}, [SECTION]);
+    useEffect(()=>{console.log("SECCIÓN -> ", SECTION)}, [SECTION]);
 
     useEffect(()=>{
         const animationTimer = setTimeout(() => {
@@ -32,7 +32,7 @@ function Portfolio () {
                 </div>
             }
 
-            {SECTION == "WELCOME" && <WelcomeProfile/>}
+            {SECTION == "WELCOME" && <WelcomeProfile initialAnimation={initialAnimation}/>}
             {SECTION == "SOCIAL" && <Social/>} 
             {SECTION == "PROJECTS" && <Projects/>} 
 

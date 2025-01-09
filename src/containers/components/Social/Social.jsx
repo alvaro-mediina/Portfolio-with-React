@@ -1,9 +1,11 @@
 import './Social.css'
+import Card from "../../../components/Card/Card";
+
 
 function Social () {
     return(
         <div className="Social">
-            <h1>Social</h1>
+            <Card/>
         </div>
     )
 }
