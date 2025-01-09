@@ -8,80 +8,48 @@
     min-height: 600px;
     width: 100%;
     height: 100%;
-    display: flex;
-    overflow: hidden;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    overflow: hidden; 
     background-color: var(--bg);
-    justify-content: space-around;
-    align-items: center;
+    position: relative; 
 }
 
-
-.arrow-left img{
-    transform: rotateZ(90deg);
-    width: 100px;
-    color:white;
-    transition: transform 0.3s ease-in-out;
-}
-
-.arrow-right img{
-    transform: rotateZ(-90deg);
-    width: 100px;
-    color:white;
-    transition: transform 0.3s ease-in-out;
-}
-
+/* Flechas */
 .arrow-left,
 .arrow-right {
-    width: 20%;
-    height: 100%;
-    cursor: pointer;
-    display: inline-flex; 
-    user-select: none;
+    width: 150px; 
+    height: 150px;
+    display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    flex-shrink: 0;
 }
 
-/* Posiciones iniciales */
-.arrow-left {
-    animation: slideInLeft 1s ease-out forwards;
+.arrow-left{
+    margin-left: 100px;
 }
 
-.arrow-right {
-    animation: slideInRight 1s ease-out forwards;
+.arrow-right{
+    margin-right: 100px;
 }
 
-.WelcomeProfile, .Projects, .About, .Contact {
-    transition: opacity 0.5s ease, transform 0.5s ease;
+/* Imágenes de las flechas */
+.arrow-left img,
+.arrow-right img {
+    width: 100%; 
+    height: auto; 
+    object-fit: contain; 
+    max-width: 100%;
 }
 
-/* Animaciones */
-@keyframes slideInLeft {
-    0% {
-        opacity: 0; /* Invisible */
-    }
-    100% {
-        opacity: 1; /* Visible */
-    }
-}
-
-@keyframes slideInRight {
-    0% {
-        opacity: 0; /* Invisible */
-    }
-    100% {
-        opacity: 1; /* Visible */
-    }
-}
-
-.arrow-left:hover,
-.arrow-right:hover {
-    transform: scale(1.1);
-}
-
-@media (width < 900px){
-    .arrow-left, .arrow-right{
+/* Responsividad */
+@media (width < 900px) {
+    .arrow-left, .arrow-right {
         display: none;
     }
 }
-
 

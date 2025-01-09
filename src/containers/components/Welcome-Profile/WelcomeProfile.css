@@ -63,8 +63,8 @@
 }
 
 .img img{
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     border-radius: 50%;
     border: 7px solid white;
@@ -74,7 +74,7 @@
 
 .left__container .name{
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-transform: uppercase;
     color: black;
 }
@@ -104,12 +104,12 @@
     text-transform: uppercase;
     text-align: center;
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .text ul{
     width: 80%;
-    font-size: 1rem;
+    font-size: 1.6rem;
     list-style: none;
     text-align: left;
     padding: 0;

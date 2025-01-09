@@ -60,10 +60,11 @@ function WelcomeProfile() {
                                 ¡BIENVENIDO A MI PORTFOLIO!
                             </div>
                             <ul>
-                                <li>🌵 Jujeño en Córdoba, Argentina</li>
+                                <li>🌵 Jujuy, Argentina</li>
                                 <li>🎂 21 años</li>
-                                <li>🤓 Estudiante de la Lic. en Ciencias de la Computación de FaMAF - UNC</li>
-                                <li>🔱 Apasionado por la programación Front-End, por la resolución de problemas y el crecimiento personal.</li>
+                                <li>🤓 Estudiante de Ciencias de la Computación</li>
+                                <li>🏬 FaMAF - UNC</li>
+                                <li>🔱 Apasionado por la programación Front-End, los desafíos y el crecimiento personal.</li>
                             </ul>
                         </div>
                     </div>

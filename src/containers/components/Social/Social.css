@@ -9,5 +9,10 @@
 .Social .Card{
     width: 70%;
     height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
     background-color: var(--aqua);
+    user-select: none;
 }

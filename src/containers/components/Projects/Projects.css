@@ -7,7 +7,7 @@
 }
 
 .Projects .Card{
-    width: 90%;
+    width: 80%;
     height: 60%;
     background-color: var(--yellow);
 }
