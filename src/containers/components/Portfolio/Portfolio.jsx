@@ -37,7 +37,7 @@ function Portfolio () {
             {SECTION == "PROJECTS" && <Projects/>} 
 
             {isWelcomeCard &&
-                <div className="arrow-right" onClick={() => leftSection()}>
+                <div className="arrow-right" onClick={() => rightSection()}>
                     <img src={arrowL}  draggable="false"/>
                 </div>
             }

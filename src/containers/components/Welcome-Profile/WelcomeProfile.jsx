@@ -28,7 +28,7 @@ function WelcomeProfile() {
         if (profileClass === "WelcomeProfile__container" && !hasSeenInitialAnimation) {
             const timer = setTimeout(() => {
                 setTransitionCompleted(true);
-                markAnimationAsCompleted(); // Marca la animación como completada
+                markAnimationAsCompleted();
             }, 1700);
 
             return () => clearTimeout(timer);
@@ -42,7 +42,7 @@ function WelcomeProfile() {
             className={profileClass}
             style={
                 hasSeenInitialAnimation
-                    ? { transition: "none" } // Desactiva transiciones después de la primera vez
+                    ? { transition: "none" }
                     : {}
             }
         >

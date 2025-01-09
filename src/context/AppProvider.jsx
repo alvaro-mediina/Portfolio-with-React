@@ -22,13 +22,14 @@ export function AppProvider ({ children }){
     const [hasSeenInitialAnimation, setHasSeenInitialAnimation] = useState(false);
 
 
-    const rightSection = () =>{
+    const rightSection = () => {
         setCurrentSection((prev) => (prev + 1) % SECTIONS.length);
-    }
+    };
     
-    const leftSection = () =>{
-        setCurrentSection((prev) => (prev - 1 + SECTIONS.length) % SECTIONS.length);
-    }
+    const leftSection = () => {
+        setCurrentSection((prev) => (prev === 0 ? SECTIONS.length - 1 : prev - 1));
+    };
+    
 
     const markAnimationCompleted = () => {
         setHasSeenInitialAnimation(true);
