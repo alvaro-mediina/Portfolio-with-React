@@ -20,8 +20,8 @@
 /* Flechas */
 .arrow-left,
 .arrow-right {
-    width: 150px; 
-    height: 150px;
+    width: 100px; 
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,11 +30,11 @@
 }
 
 .arrow-left{
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 .arrow-right{
-    margin-right: 100px;
+    margin-right: 50px;
 }
 
 /* Imágenes de las flechas */
@@ -48,6 +48,7 @@
 
 /* Responsividad */
 @media (width < 900px) {
+    
     .arrow-left, .arrow-right {
         display: none;
     }
